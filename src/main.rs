@@ -84,7 +84,7 @@ async fn main(
 
     let config = move |cfg: &mut ServiceConfig| {
         cfg.service(
-            web::scope("")
+            web::scope("/")
                 .wrap(Logger::default())
                 .service(retrieve)
                 .service(add)
